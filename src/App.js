@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import CompteForm from './components/CompteForm';
+import CompteList from './components/CompteList';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+    <div className="container py-4">
+      <header className="mb-4">
+        <h1 className="text-center text-primary">Gestion des Comptes</h1>
+        <p className="text-center text-muted mb-0">
+          Ajoutez un compte puis visualisez la liste en dessous.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+
+      <section className="mb-4">
+        <CompteForm />
+      </section>
+
+      <hr />
+
+      <section className="mb-5">
+        <CompteList />
+      </section>
     </div>
   );
 }
